@@ -126,7 +126,7 @@
           ${data.map(item=>{
             return `
               <li class='tree-curr'>
-                <span>${item.name}</span>
+                <span>${item.children?'+':''}${item.name}</span>
                 ${item.children?dom(item.children):''}
               </li>
             `
@@ -148,7 +148,6 @@
           })
         }
       })
-
     })
 
 
